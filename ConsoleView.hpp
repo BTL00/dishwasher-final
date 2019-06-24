@@ -20,12 +20,12 @@
 #include "Program.hpp"
 #include "Controler.hpp"
 //#include "Dishwasher.hpp"
-
+#include "View.h"
 
 #ifndef ConsoleView_h
 #define ConsoleView_h
 
-class ConsoleView {
+class ConsoleView: public View {
 public:
     ConsoleView() {
         std::cout << "    Super Dishwasher v5000" << std::endl;

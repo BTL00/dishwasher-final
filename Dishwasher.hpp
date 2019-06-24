@@ -11,13 +11,13 @@
 #ifndef Dishwasher_h
 #define Dishwasher_h
 #ifndef ConsoleView_h
-#include "ConsoleView.hpp"
+#include "View.hpp"
 #endif
 class Dishwasher
 {
 private:
     Controler* controler;
-    ConsoleView* view;
+    View* view;
 
 
 public:
@@ -25,7 +25,7 @@ public:
     void selectProgram();
 
     int confirm();
-    void run(ConsoleView* v);
+    void run(View* v);
     bool progress() ;
     void refresh();
     Dishwasher(){};
@@ -33,7 +33,7 @@ public:
     
 };
 
-void Dishwasher::run(ConsoleView* v) {
+void Dishwasher::run(View* v) {
     
         this->working = false;
         this->view = v;
